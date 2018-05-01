@@ -19,8 +19,7 @@ router.route('/')
       .then(apiResponse => {
         res.render('index', { title: 'Express' })
       })
-      .catch(err => {
-        console.err(err)
+      .catch(() => {
         next(createError(424))
       })
   })
