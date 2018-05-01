@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "DEBUG=brew-review:* npm start",
-    "test": "mocha"
+    "test": "mocha",
+    "watch": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "express-generator": "^4.16.0",
+    "nodemon": "^1.17.3",
     "sequelize-cli": "^4.0.0"
   }
 }
