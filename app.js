@@ -4,6 +4,7 @@ var path = require('path')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 var sassMiddleware = require('node-sass-middleware')
+var hbs = require('hbs')
 require('dotenv').config()
 
 var indexRouter = require('./routes/index')
@@ -14,6 +15,7 @@ var app = express()
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
+hbs.registerPartials(path.join(__dirname, '/views/partials'))
 
 app.use(logger('dev'))
 app.use(express.json())
